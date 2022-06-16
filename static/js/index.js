@@ -46,6 +46,7 @@ const playButton = document.querySelector('#play');
 const saveButton = document.querySelector('#save');
 const savedAudioMessagesContainer = document.querySelector('#saved-audio-messages');
 const downloadMe = document.querySelector('#downloadMe');
+const s2tResult = document.querySelector('#s2tResult');
 
 let recorder;
 let audio;
@@ -92,49 +93,33 @@ playButton.addEventListener('click', () => {
   audio.play();
 });
 
+// saveButton.addEventListener('click', () => {
+//   downloadMe.href = audio.audioUrl;
+//   downloadMe.download = 'v_test.wav';
+//   downloadMe.style.display="block";
+// });
+
 saveButton.addEventListener('click', () => {
-  downloadMe.href = audio.audioUrl;
-  downloadMe.download = 'v_test.wav';
-  downloadMe.style.display="block";
+ const reader = new FileReader();
+ reader.readAsDataURL(audio.audioBlob);
+ reader.onload = () => {
+   const base64AudioMessage = reader.result.split(',')[1];
+   const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify({
+      "base_64_voice": base64AudioMessage
+    });
+
+    const requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+   fetch("https://tbot1.anhph.com/s2t", requestOptions)
+  .then(response => response.text())
+  .then(result => s2tResult.textContent = result)
+  .catch(error => console.log('error', error));
+ };
 });
-
-//saveButton.addEventListener('click', () => {
-//  const reader = new FileReader();
-//  reader.readAsDataURL(audio.audioBlob);
-//  reader.onload = () => {
-//    const base64AudioMessage = reader.result.split(',')[1];
-//
-//    fetch('/messages', {
-//      method: 'POST',
-//      headers: { 'Content-Type': 'application/json' },
-//      body: JSON.stringify({ message: base64AudioMessage })
-//    }).then(res => {
-//      if (res.status === 201) {
-//        return populateAudioMessages();
-//      }
-//      console.log('Invalid status saving audio message: ' + res.status);
-//    });
-//  };
-//});
-
-const populateAudioMessages = () => {
-  return fetch('/messages').then(res => {
-    if (res.status === 200) {
-      return res.json().then(json => {
-        json.messageFilenames.forEach(filename => {
-          let audioElement = document.querySelector(`[data-audio-filename="${filename}"]`);
-          if (!audioElement) {
-            audioElement = document.createElement('audio');
-            audioElement.src = `/messages/${filename}`;
-            audioElement.setAttribute('data-audio-filename', filename);
-            audioElement.setAttribute('controls', true);
-            savedAudioMessagesContainer.appendChild(audioElement);
-          }
-        });
-      });
-    }
-    console.log('Invalid status getting messages: ' + res.status);
-  });
-};
-
-<!--      populateAudioMessages();-->
