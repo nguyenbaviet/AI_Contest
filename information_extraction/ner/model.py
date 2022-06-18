@@ -347,6 +347,7 @@ def normalize_text(text, norm_dict):
         text = text.replace(' ' + key, value)
 
     text = re.sub(r'(\d)\s', r'\1', text)
+    text = re.sub(r'chuyển tiền', '', text)
 
     return text
 
@@ -379,11 +380,11 @@ class TextClassifyModel:
     predictions = {}
 
     for text_id, text in enumerate(info):
+      # convert to vietnamese lowercase
+      text = text.lower()
       # normalize text
       text = normalize_text(text, self.norm_dict)
       print(text)
-      # convert to vietnamese lowercase
-      text = text.lower()
       text_tensor, ner_text, vietnamese_text, eng_text, known_tag_seq = prepare_sequence(
         text, self.word_to_ix)
 

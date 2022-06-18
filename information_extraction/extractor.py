@@ -248,5 +248,5 @@ class BankExtractor:
 if __name__ == "__main__":
   ner_model_path = '/home/thiendo/Desktop/AI_Contest/information_extraction/ner/ner_20220516.pth'
   bank_extractor = BankExtractor(ner_checkpoint=ner_model_path)
-  info = ['Chuyen tien cho Nguyễn Văn A momo không chín bốn năm không hai hai bảy một hai']
+  info = ['Chuyển tiền cho Nguyễn Văn A ngan hang Techcombank không chín bốn năm không hai hai bảy một hai']
   bank_extractor(info)
