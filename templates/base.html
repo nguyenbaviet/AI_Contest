@@ -6,9 +6,6 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
-  <!-- Favicon -->
-  <link href="static/img/favicon.ico" rel="icon">
-
   <!-- Google Web Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,26 +74,20 @@
 
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-  <a href="templates/index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
+  <a href="templates/index.html"
+     class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
     <h2 class="m-0"><i class="text-primary me-2"></i>CV Team</h2>
   </a>
-  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav ms-auto p-4 p-lg-0">
-      <a href="index.html" class="nav-item nav-link active">Home</a>
-      <a href="about.html" class="nav-item nav-link">Voice Payment</a>
-      <a href="contact.html" class="nav-item nav-link">About</a>
-      <a href="courses.html" class="nav-item nav-link">Register</a>
-      <a href="courses.html" class="nav-item nav-link">Login</a>
-      <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="display: None">Info</a>
-        <div class="dropdown-menu bg-light m-0">
-          <a href="feature.html" class="dropdown-item">Username</a>
-          <a href="appointment.html" class="dropdown-item">Logout</a>
-        </div>
-      </div>
+      <a href="" class="nav-item nav-link active">Home</a>
+      <a href="about.html" class="nav-item nav-link" data-bs-toggle="modal"
+         data-bs-target="#voicePayment">Voice Payment</a>
+      <a href="" class="nav-item nav-link">About</a>
     </div>
   </div>
 </nav>
@@ -112,11 +103,14 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-lg-7">
-                <h1 class="display-2 text-light mb-5 animated slideInDown">Easy to transfer money with your voice</h1>
-                <button type="button" class="btn btn-primary py-sm-3 px-sm-5" data-bs-toggle="modal" data-bs-target="#voicePayment">
+                <h1 class="display-2 text-light mb-5 animated slideInDown">Easy to transfer money
+                  with your voice</h1>
+                <button type="button" class="btn btn-primary py-sm-3 px-sm-5 btnVoicePayment" data-bs-toggle="modal"
+                        data-bs-target="#voicePayment">
                   Voice Payment
                 </button>
-                <button type="button" class="btn btn-light py-sm-3 px-sm-5 ms-3" data-bs-toggle="modal" data-bs-target="#enrollVoice">
+                <button type="button" class="btn btn-light py-sm-3 px-sm-5 ms-3 btnEnrollVoice"
+                        data-bs-toggle="modal" data-bs-target="#voicePayment">
                   Enroll Voice
                 </button>
               </div>
@@ -130,11 +124,14 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-lg-7">
-                <h1 class="display-2 text-light mb-5 animated slideInDown">Don't need to type text. Just by your voice</h1>
-                <button type="button" class="btn btn-primary py-sm-3 px-sm-5" data-bs-toggle="modal" data-bs-target="#voicePayment">
+                <h1 class="display-2 text-light mb-5 animated slideInDown">Don't need to type text.
+                  Just by your voice</h1>
+                <button type="button" class="btn btn-primary py-sm-3 px-sm-5 btnVoicePayment" data-bs-toggle="modal"
+                        data-bs-target="#voicePayment">
                   Voice Payment
                 </button>
-                <button type="button" class="btn btn-light py-sm-3 px-sm-5 ms-3" data-bs-toggle="modal" data-bs-target="#enrollVoice">
+                <button type="button" class="btn btn-light py-sm-3 px-sm-5 ms-3 btnEnrollVoice"
+                        data-bs-toggle="modal" data-bs-target="#voicePayment">
                   Enroll Voice
                 </button>
               </div>
@@ -148,11 +145,14 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-lg-7">
-                <h1 class="display-2 text-light mb-5 animated slideInDown">Safe payment Is Our Top Priority with voice verification</h1>
-                <button type="button" class="btn btn-primary py-sm-3 px-sm-5" data-bs-toggle="modal" data-bs-target="#voicePayment">
+                <h1 class="display-2 text-light mb-5 animated slideInDown">Safe payment Is Our Top
+                  Priority with voice verification</h1>
+                <button type="button" class="btn btn-primary py-sm-3 px-sm-5 btnVoicePayment" data-bs-toggle="modal"
+                        data-bs-target="#voicePayment">
                   Voice Payment
                 </button>
-                <button type="button" class="btn btn-light py-sm-3 px-sm-5 ms-3" data-bs-toggle="modal" data-bs-target="#enrollVoice">
+                <button type="button" class="btn btn-light py-sm-3 px-sm-5 ms-3 btnEnrollVoice"
+                        data-bs-toggle="modal" data-bs-target="#voicePayment">
                   Enroll Voice
                 </button>
               </div>
@@ -161,57 +161,6 @@
         </div>
       </div>
     </div>
-
-    <!--    Modal  voice payment-->
-    <div class="modal fade" id="voicePayment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">MoMo Voice Payment</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div>
-              <button id="record">Record</button>
-              <button id="pause" disabled>Pause</button>
-              <button id="stop" disabled>Stop</button>
-              <button id="play" disabled>Play</button>
-            </div>
-            <div id="s2tResult"></div>
-            <div class="wrapper" id="waitingS2T" style="display: None">
-              <div class="typing-demo">
-                Working in progress. Please wait...
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#voicePaymentDetail">Transfer Money</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="voicePaymentDetail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">MoMo Voice Payment</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div id="transferMoneyForm">
-              Successfully!
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#voicePayment" style="background: blue">Back</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--    End Modal voice payment-->
     <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
             data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -274,8 +223,8 @@
 </div>
 <!-- Facts End -->
 
-<!--{% block content %}-->
-<!--{% endblock %}-->
+{% block content %}
+{% endblock %}
 
 <!-- Team Start -->
 <div class="container-xxl py-6">
@@ -368,7 +317,8 @@
 <!-- Team End -->
 
 <!-- Footer Start -->
-<div class="container-fluid bg-dark text-light footer my-6 mb-0 py-6 wow fadeIn" data-wow-delay="0.1s">
+<div class="container-fluid bg-dark text-light footer my-6 mb-0 py-6 wow fadeIn"
+     data-wow-delay="0.1s">
   <div class="container">
     <div class="row g-5">
       <div class="col-lg-3 col-md-6">
@@ -404,10 +354,13 @@
         </form>
         <h6 class="text-white mt-4 mb-3">Follow Us</h6>
         <div class="d-flex pt-2">
-          <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-square btn-outline-light me-1" href=""><i
+              class="fab fa-twitter"></i></a>
           <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-facebook-f"></i></a>
-          <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-youtube"></i></a>
-          <a class="btn btn-square btn-outline-light me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-square btn-outline-light me-1" href=""><i
+              class="fab fa-youtube"></i></a>
+          <a class="btn btn-square btn-outline-light me-0" href=""><i
+              class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
     </div>

@@ -1,12 +1,12 @@
 .wrapper {
-  height: 5vh;
+  height: 10vh;
   /*This part is important for centering*/
   display: grid;
   place-items: center;
 }
 
 .typing-demo {
-  width: 50ch;
+  width: 20ch;
   animation: typing 3s steps(22);
   animation-iteration-count: infinite;
   white-space: nowrap;
@@ -14,7 +14,7 @@
   border-right: 3px solid;
   font-family: monospace;
   font-size: 2em;
-  color: blue;
+  color: grey;
 }
 
 @keyframes typing {
@@ -28,3 +28,4 @@
     border-color: transparent
   }
 }
+
