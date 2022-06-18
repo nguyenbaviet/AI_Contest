@@ -1,0 +1,30 @@
+{
+  "phones": [
+    {
+      "mobile": "Viettel",
+      "old_phoneCode": "0162, 0163, 0164, 0165, 0166, 0167, 0168, 0169",
+      "phoneCode": "086, 096, 097, 098, 032, 033, 034, 035, 036, 037, 038, 039"
+    },
+    {
+      "mobile": "MobiFone",
+      "old_phoneCode": "0120, 0121, 0122, 0126, 0128",
+      "phoneCode": "089, 090, 093, 070, 079, 077, 076, 078"
+    },
+    {
+      "mobile": "VinaPhone",
+      "old_phoneCode": "0123, 0124, 0125, 0127, 0129",
+      "phoneCode": "088, 091, 094, 083, 084, 085, 081, 082"
+    },
+    {
+      "mobile": "Vietnamobile",
+      "old_phoneCode": "",
+      "phoneCode": "092, 056, 058"
+    },
+    {
+      "mobile": "Gtel",
+      "old_phoneCode": "0199",
+      "phoneCode": "099, 059"
+    }
+  
+  ]
+}

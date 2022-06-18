@@ -202,9 +202,6 @@ def detect_bank_name(texts: dict, bank_name_references):
     else:
       entities_2 = []
 
-    print(entities_1)
-    print(entities_2)
-
     if len(entities_1) != 0:
       for entity in entities_1:
         bank_name_entities[entity_idx] = entity

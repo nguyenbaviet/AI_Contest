@@ -1,0 +1,550 @@
+{
+  "maintainConfig": {
+    "startDate": 1571909400000,
+    "endDate": 1571915100000,
+    "message": "Dịch vụ đang được bảo trì. Quý khách vui lòng quay lại sau. Chúng tôi rất xin lỗi vì sự bất tiện này"
+  },
+  "napasBanks": [
+    {
+      "bankCode": "970436",
+      "bankName": "Vietcombank",
+      "bankLinkImage": "local:ic_vietcombank",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_vietcombank.png?",
+      "bankFee": "3.300đ + 0.65%",
+      "bankNameSearch": "VCB, Vietcombank, Ngoại Thương Việt Nam, TMCP Ngoại Thương Việt Nam, Vietcom"
+    },
+    {
+      "bankCode": "970415",
+      "bankName": "Vietinbank",
+      "bankLinkImage": "local:ic_viettinbank",
+      "bankFee": "3.300đ + 0.65%",
+      "bankLinkImageNew": "https://atc-edge07.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_vietinbank.png",
+      "bankNameSearch": "Vietinbank, Viettin, Vietin bank, Công thương Việt Nam, TMCP Công Thương Việt Nam"
+    },
+    {
+      "bankCode": "970407",
+      "bankName": "Techcombank",
+      "bankLinkImageNew": "https://atc-edge07.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_techcombank.png",
+      "bankLinkImage": "local:ic_techcombank",
+      "bankNameSearch": "Techcombank, Kỹ thương Việt Nam, TMCP Kỹ Thương Việt Nam, Techcom, TCB",
+      "bankFee": "3.300đ + 0.65%",
+      "maintainConfig": {
+        "startDate": 1588135388470,
+        "endDate": 1589135388470,
+        "message": "Dịch vụ đang được bảo trì. Quý khách vui lòng quay lại sau [endDate]. Chúng tôi rất xin lỗi vì sự bất tiện này."
+      }
+    },
+    {
+      "bankCode": "970418",
+      "bankName": "BIDV",
+      "bankLinkImage": "local:ic_bidv",
+      "bankLinkImageNew": "https://atc-edge08.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_bidv.png",
+      "bankFee": "3.300đ + 0.65%",
+      "bankNameSearch": "BIDV, Đầu tư và phát triển, Đầu tư và phát triển Việt Nam, TMCP phát triển và đầu tư Việt Nam"
+    },
+    {
+      "bankCode": "970405",
+      "bankName": "Agribank",
+      "bankLinkImage": "local:ic_aribank",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_agribank.png",
+      "bankNameSearch": "Agribank, Nông nghiệp, Nông nghiệp và phát triển nông thôn",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970403",
+      "bankName": "Sacombank",
+      "bankLinkImage": "local:ic_sacombank",
+      "bankFee": "3.300đ + 0.65%",
+      "bankLinkImageNew": "https://cdn.mservice.com.vn/app/img/bank/ic_sacombank.png",
+      "bankNameSearch": "Sacombank, Sài Gòn Thương Tín, TMCP Sai Gon Thuong Tin"
+    },
+    {
+      "bankCode": "79303001",
+      "bankName": "Sacombank",
+      "bankLinkImage": "local:ic_sacombank",
+      "bankFee": "3.300đ + 0.65%",
+      "bankLinkImageNew": "https://atc-edge01.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_sacombank.png",
+      "bankNameSearch": "Sacombank, Sài Gòn Thương Tín"
+    },
+    {
+      "bankCode": "970416",
+      "bankName": "ACB",
+      "bankLinkImage": "local:ic_acb",
+      "bankLinkImageNew": "https://atc-edge09.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_acb.png",
+      "bankFee": "3.300đ + 0.65%",
+      "bankNameSearch": "ACB, Á Châu, TMCP Á Châu"
+    },
+    {
+      "bankCode": "970422",
+      "bankName": "MBBank",
+      "bankLinkImage": "local:ic_mb",
+      "bankLinkImageNew": "https://img.mservice.io/momo_app_v2/new_version/All_team_/new_logo_bank/ic_mbbank.png",
+      "bankFee": "3.300đ + 0.65%",
+      "bankNameSearch": "MBBank, Quân đội, TMCP Quân Đội, MB Bank, MB"
+    },
+    {
+      "bankCode": "970423",
+      "bankName": "TPBank",
+      "bankLinkImage": "local:ic_tpbank",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_tpbank.png",
+      "bankFee": "3.300đ + 0.65%",
+      "bankNameSearch": "TPBank, Tiên Phong, TMCP Tiên Phong, Tien Phong Bank"
+    },
+    {
+      "bankCode": "970424",
+      "bankName": "Shinhan",
+      "bankLinkImage": "local:ic_shinhan",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_shinhan.png",
+      "bankNameSearch": "Shinhan Bank, Shinhan, SVB, ShinhanBank",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970441",
+      "bankName": "VIB",
+      "bankLinkImage": "local:ic_vib",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_vib.png",
+      "bankNameSearch": "Quốc tế, VIB, Quốc tế Việt Nam",
+      "bankFee": "3.300đ + 0.65%",
+      "cardNumberMin": 1
+    },
+    {
+      "bankCode": "970432",
+      "bankName": "VPBank",
+      "bankLinkImage": "local:ic_vpbank",
+      "bankFee": "3.300đ + 0.65%",
+      "bankLinkImageNew_backup": "local:ic_vpbank_1",
+      "bankLinkImageNew": "https://cdn.mservice.com.vn/app/img/bank/vpbank.png",
+      "bankNameSearch": "VPBank, Việt Nam Thịnh Vượng, Thịnh Vượng, VPB, TMCP Viet Nam Thinh Vuong"
+    },
+    {
+      "bankCode": "970443",
+      "bankName": "SHB",
+      "bankLinkImage": "local:ic_shb",
+      "bankFee": "3.300đ + 0.65%",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_shb.png",
+      "bankNameSearch": "SHB, Sài Gòn Hà Nội, Sài Gòn - Hà Nội"
+    },
+    {
+      "bankCode": "970448",
+      "bankName": "OCB",
+      "bankLinkImage": "local:ic_ocb",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_ocb.png",
+      "bankNameSearch": "OCB, Phương Đông",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970431",
+      "bankName": "Eximbank",
+      "bankLinkImage": "local:ic_eximbank",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_eximbank.png",
+      "bankNameSearch": "Eximbank, Xuất nhật khẩu, Xuất nhập khẩu Việt Nam",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970438",
+      "bankName": "BaoViet Bank",
+      "bankLinkImage": "local:ic_baoviet",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_bao_viet.png",
+      "bankNameSearch": "Bảo Việt, BaoVietBank, BaoViet Bank",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970454",
+      "bankName": "Viet Capital Bank",
+      "bankLinkImage": "local:ic_vietcapitalbank",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_vccb.png",
+      "bankNameSearch": "Bản Việt, Viet Capital Bank, Viet Captital Bank, Vietcapital",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970429",
+      "bankName": "TMCP Sài Gòn",
+      "bankLinkImage": "local:ic_scb",
+      "bankLinkImageNew": "https://cdn.mservice.com.vn/app/img/bank/ic_scb.png",
+      "bankNameSearch": "SCB, TMCP Sài Gòn, Sài Gòn",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970421",
+      "bankName": "VRB",
+      "bankLinkImage": "local:ic_vrb",
+      "bankLinkImageNew": "https://img.mservice.io/momo_app_v2/new_version/All_team_/new_logo_bank/ic_viet_nga.png",
+      "bankFee": "3.300đ + 0.65%",
+      "bankNameSearch": "VRB, Việt Nga, Liên doanh Việt - Nga, viet nam russia"
+    },
+    {
+      "bankCode": "970425",
+      "bankName": "ABBank",
+      "bankLinkImage": "local:ic_abbank",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_abbank.png",
+      "bankNameSearch": "An Bình, ABBank, ABB, TMCP An Binh",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970412",
+      "bankName": "PVcombank",
+      "bankLinkImage": "local:ic_pvcombank",
+      "bankFee": "3.300đ + 0.65%",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_pvcombank.png",
+      "bankNameSearch": "Đại Chúng, PVCombank, Đại Chúng Việt Nam, TMCP Dai Chung Viet Nam, PVCom, PVC"
+    },
+    {
+      "bankCode": "970414",
+      "bankFee": "3.300đ + 0.65%",
+      "bankName": "OceanBank",
+      "bankLinkImage": "local:ic_oceanbank",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_oceanbank.png",
+      "bankNameSearch": "OceanBank, Đại dương"
+    },
+    {
+      "bankCode": "970428",
+      "bankName": "Nam A Bank",
+      "bankLinkImage": "local:ic_nama",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_nam_a.png",
+      "bankNameSearch": "Nam Á, NamABank, NamA, TMCP Nam Á",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970437",
+      "bankName": "HDBank",
+      "bankLinkImage": "local:ic_hdbank",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_hdbank.png",
+      "bankNameSearch": "HD Bank, HDBank, Phát triển Thành phố Hồ Chí Minh, TMCP Phát triển Thành phố Hồ Chí Minh",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970433",
+      "bankName": "Vietbank",
+      "bankLinkImage": "local:ic_vietbank",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_viet_bank.png",
+      "bankNameSearch": "Vietbank, Việt Bank, Việt Nam Thương Tín, Việt Nam Thương Tín, TMCP Việt Nam Thương Tín",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970439",
+      "bankName": "Public Bank",
+      "bankLinkImage": "local:ic_publicbank",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_publicbank.png",
+      "bankNameSearch": "Public Bank, PBVN, PublicBank",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970442",
+      "bankName": "Hong Leong Bank",
+      "bankLinkImage": "local:ic_hong_leong_bank",
+      "bankLinkImageNew": "https://cdn.mservice.com.vn/app/img/bank/ic_hong_leon_bank.png",
+      "bankNameSearch": "Hongleongbank, Hong Leong Bank, HongLeong Bank",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970430",
+      "bankName": "PG Bank",
+      "bankLinkImage": "local:ic_pgbank",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_pgbank.png",
+      "bankNameSearch": "PG Bank, Xăng Dầu Petrolimex, Petrolimex, PGBank",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970446",
+      "bankName": "Co-op Bank",
+      "bankLinkImage": "local:ic_coopbank",
+      "bankLinkImageNew": "https://cdn.mservice.com.vn/app/img/bank/ic_coop_bank.png",
+      "bankNameSearch": "Co op Bank, Co-opBank, Hợp tác, hợp tác xã",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "422589",
+      "bankName": "CIMB",
+      "bankFee": "3.300đ + 0.65%",
+      "bankLinkImage": "local:ic_cimb",
+      "bankLinkImageNew": "https://img.mservice.io/momo_app_v2/new_version/All_team_/new_logo_bank/ic_cimb.png",
+      "bankNameSearch": "CIMB, CIMB Việt Nam"
+    },
+    {
+      "bankCode": "970419",
+      "bankName": "NCB",
+      "bankFee": "3.300đ + 0.65%",
+      "bankLinkImage": "local:ic_ncb",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_ncb.png",
+      "bankNameSearch": "NCB, Quốc Dân"
+    },
+    {
+      "bankCode": "970434",
+      "bankName": "Indovina Bank",
+      "bankLinkImage": "local:ic_ivb",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_indovina.png",
+      "bankNameSearch": "Indovina Bank, Trách nhiệm hữu hạn Indovina, IVB, TNHH Indovina",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970406",
+      "bankName": "DongA Bank",
+      "bankLinkImage": "local:ic_donga",
+      "bankFee": "3.300đ + 0.65%",
+      "bankLinkImageNew": "https://cdn.mservice.com.vn/app/img/bank/ic_dong_a_bank.png",
+      "bankNameSearch": "Đông Á, Dong A Bank, TMCP Đông Á, DongA bank, DongABank"
+    },
+    {
+      "bankCode": "970408",
+      "bankName": "GPBank",
+      "bankFee": "3.300đ + 0.65%",
+      "bankLinkImage": "local:ic_gpbank",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_gpbank.png",
+      "bankNameSearch": "GPBank, GP Bank, Dầu khí toàn cầu"
+    },
+    {
+      "bankCode": "970409",
+      "bankName": "Bac A Bank",
+      "bankLinkImage": "local:ic_baca",
+      "bankFee": "3.300đ + 0.65%",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_bac_a.png",
+      "bankNameSearch": "Bắc Á, Bac A Bank, BacABank, TMCP Bắc Á, BacA Bank"
+    },
+    {
+      "bankCode": "970427",
+      "bankName": "VietABank",
+      "bankLinkImage": "local:ic_vieta",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_viet_a.png",
+      "bankNameSearch": "Việt Á, Viet A Bank, VietABank, VietA bank",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970400",
+      "bankName": "Saigonbank",
+      "bankLinkImage": "local:ic_saigonbank",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_saigonbank.png",
+      "bankNameSearch": "Sài Gòn, SaigonBank, Sai Gon Bank, TMCP Sài Gòn Công Thương, Sài Gòn Công Thương",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970426",
+      "bankName": "Maritime Bank",
+      "bankLinkImage": "local:ic_maritimebank",
+      "bankLinkImageNew": "https://img.mservice.io/momo_app_v2/new_version/All_team_/new_logo_bank/ic_msb.png",
+      "bankNameSearch": "Maritime Bank, Hàng Hải, Hàng Hải Việt Nam, MSB",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970449",
+      "bankName": "LienVietPostBank",
+      "bankLinkImage": "local:ic_lienvietpostbank",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_lienvietpostbank.png",
+      "bankNameSearch": "Liên Việt, LienVietPostBank, Lien Viet Post Bank, LPB, LVB",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970452",
+      "bankName": "KienlongBank",
+      "bankLinkImage": "local:ic_kienlong",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/img/icon/logo-kien-long@3x.png",
+      "bankNameSearch": "Kienlongbank, Kiên Long, Kien Long Bank, Kienlong Bank",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970455",
+      "bankName": "Industrial Bank Of Korea – IBK",
+      "bankLinkImage": "local:ic_ibk",
+      "bankLinkImageNew": "https://cdn.mservice.com.vn/app/img/bank/ic_ibk_bank.png",
+      "bankNameSearch": "IBK, Industrial Bank of Korea, Công Nghiệp Hàn Quoc",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970457",
+      "bankName": "Woori",
+      "bankLinkImage": "local:ic_wooribank",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_woori.png",
+      "bankNameSearch": "Woori Bank, Wooribank, wori, worri",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970440",
+      "bankName": "SeABank",
+      "bankLinkImage": "local:ic_seabank",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_seabank.png",
+      "bankNameSearch": "Seabank, Đông Nam Á, Sea Bank",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970458",
+      "bankName": "UOB",
+      "bankLinkImage": "local:ic_uob",
+      "bankLinkImageNew": "https://img.mservice.com.vn/momo_app_v2/new_version/All_team_/new_logo_bank/ic_uob.png",
+      "bankNameSearch": "United Overseas Bank, TNHH MTV United Overseas Bank, UOB",
+      "bankFee": "3.300đ + 0.65%"
+    },
+    {
+      "bankCode": "970410",
+      "bankName": "Standard Chartered",
+      "bankLinkImage": "local:ic_standard_chartered_1",
+      "bankLinkImageNew": "https://cdn.mservice.com.vn/app/img/bank/ic_standard_chartered.png",
+      "bankNameSearch": "Standard Chartered, SC",
+      "bankFee": "3.300đ + 0.65%"
+    }
+  ],
+  "userNameTextBox": {
+    "isEnableTextInput": false,
+    "regexpMatch": "^[a-zA-Z0-9]*$",
+    "maxLength": 50
+  },
+  "numberCardTextBoxProps": {
+    "placeholder": "Số thẻ/ tài khoản",
+    "flyLabelText": "",
+    "maxLength": 21,
+    "regexpMatch": "^[a-zA-Z0-9]*$",
+    "regex": "^[a-zA-Z0-9]*$"
+  },
+  "amountTextBoxProps": {
+    "placeholder": "Số tiền chuyển",
+    "flyLabelText": "",
+    "minMoney": 10000,
+    "maxMoney": 20000000,
+    "error": {
+      "minMoney": "Số tiền tối thiểu có thể giao dịch là 10.000đ"
+    }
+  },
+  "noteTextBoxProps": {
+    "placeholder": "Tin nhắn (Không dấu)",
+    "flyLabelText": "",
+    "maxLength": 70,
+    "isRequest": true,
+    "regex": "^[a-zA-Z0-9ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ ]*$",
+    "matchRegex": true
+  },
+  "phoneNumberTextBoxProps": {
+    "placeholder": "Số điện thoại người nhận",
+    "flyLabelText": "Số điện thoại người nhận",
+    "regexpMatch": "^[0-9]*$",
+    "keyboardType": "numeric",
+    "regexLength": "^(0)([^]{9,10})$",
+    "regex": "^(0)([^]{9,10})$",
+    "isRequest": true,
+    "errLength": "Vui lòng nhập đúng định dạng số điện thoại"
+  },
+  "saveTextBoxProps": {
+    "placeholder": "Lưu thông tin thẻ/ số tài khoản"
+  },
+  "errorCheckAccount": {
+    "accountError": "Thông tin thẻ/ tài khoản không chính xác vui lòng kiểm tra lại",
+    "errTimeOut": "Đã hết thời gian phản hồi hoặc thông tin nhập chưa chính xác, vui lòng kiểm tra lại"
+  },
+  "configSaveCard": {
+    "isShow": true,
+    "recomandOn": true
+  },
+  "forNonBank": {
+    "numberCardTextBoxProps": {
+      "placeholder": "Nhập số thẻ/ tài khoản",
+      "flyLabelText": "",
+      "maxLength": 23,
+      "regex": "^[a-zA-Z0-9 ]*$",
+      "popupParam": {
+        "title": "Số thẻ/ tài khoản",
+        "description": "Số thẻ/ tài khoản là dãy số được in trong phiếu mở tài khoản của bạn.",
+        "image": "https://img.mservice.io/momo_app_v2/img/bank_icon/img_bank_acount_number.png"
+      }
+    },
+    "PCIDSS": "MoMo đã được cấp chứng chỉ bảo mật PCI-DSS, hoàn toàn không lưu thông tin thẻ.",
+    "note": "Lưu ý: Vui lòng nhập đúng thông tin thẻ/tài khoản",
+    "personalIdTextBoxProps": {
+      "placeholder": "Nhập CMND/CCCD/Hộ chiếu",
+      "floatingValue": "CMND/CCCD/Hộ chiếu",
+      "flyLabelText": "",
+      "maxLength": 12,
+      "regexpMatch": "^[a-zA-Z0-9]*$"
+    },
+    "userNameTextBoxProps": {
+      "isEnableTextInput": true,
+      "maxLength": 50,
+      "regex": "^[a-zA-Z ]*$",
+      "matchRegex": true,
+      "placeholder": "Nhập họ và tên chủ thẻ/ tài khoản",
+      "floatingValue": "Họ và tên chủ thẻ/ tài khoản",
+      "flyLabelText": "",
+      "popupParam": {
+        "title": "Họ và tên chủ thẻ/ tài khoản",
+        "description": "Họ và tên chủ thẻ/ tài khoản là dãy số được in trong phiếu mở tài khoản của bạn.",
+        "image": "https://img.mservice.io/momo_app_v2/img/bank_icon/img_bank_acount_name.png"
+      }
+    }
+  },
+  "components": {
+    "phoneNumberTextBoxProps": {
+      "placeholder": "Số điện thoại người nhận",
+      "flyLabelText": "Số điện thoại người nhận",
+      "keyboardType": "numeric",
+      "isRequired": false,
+      "regexConfig": [
+        {
+          "regex": "^[0-9]*$",
+          "err": "Số điện thoại chưa đúng định dạng"
+        },
+        {
+          "regex": "^(0)([^]{9})$",
+          "err": "Vui lòng nhập đúng định dạng số điện thoại"
+        }
+      ]
+    },
+    "noteTextBoxProps": {
+      "placeholder": "Tin nhắn (Không dấu)",
+      "flyLabelText": "",
+      "maxLength": 70,
+      "isRequired": false,
+      "regexConfig": [
+        {
+          "regexpMatch": "^[a-zA-Z0-9]*$",
+          "errMatch": "Xin vui lòng nhập tin nhắn không dấu"
+        }
+      ]
+    },
+    "userNameTextBox": {
+      "isEnableTextInput": false,
+      "maxLength": 50,
+      "regexConfig": [
+        {
+          "regexpMatch": "^[a-zA-Z ]*$",
+          "errMatch": "Xin vui lòng nhập tên không dấu"
+        }
+      ]
+    },
+    "numberCardTextBoxProps": {
+      "placeholder": "Số thẻ/ tài khoản",
+      "flyLabelText": "",
+      "maxLength": 21,
+      "isRequired": true,
+      "regexConfig": [
+        {
+          "regexpMatch": "^[a-zA-Z0-9]*$",
+          "errMatch": "Xin vui lòng nhập số thẻ"
+        }
+      ]
+    },
+    "amountTextBoxProps": {
+      "placeholder": "Số tiền chuyển",
+      "flyLabelText": "",
+      "isRequired": true,
+      "minMoney": 20000,
+      "maxMoney": 20000000,
+      "error": {
+        "minMoney": "Số tiền tối thiểu có thể giao dịch là 20.000đ",
+        "maxMoney": "Số tiền tối đa có thể giao dịch là 20.000.000đ"
+      },
+      "keyboardType": "numeric",
+      "regexConfig": [
+        {
+          "regexpMatch": "^[0-9]+$",
+          "errMatch": "Xin vui lòng nhập số tiền"
+        }
+      ]
+    }
+  },
+  "isHiddenMoneyChange": false,
+  "bankInforText": {
+    "text": "Dịch vụ thu hộ chi hộ do Momo hỗ trợ các Ngân hàng đối tác cung cấp. ",
+    "icon": "https://img.mservice.io/momo_app_v2/new_version/img/icon/ic_help.png"
+  },
+  "onNewBank": true,
+  "transferBankInfo": {
+    "introduction": "Chuyển tiền nhanh, an toàn đến số thẻ/tài khoản của 45 ngân hàng tại Việt Nam.\n\nLưu ý:\n\nNgười nhận sẽ được nhận tiền ngay khi thực hiện thành công giao dịch.\n\nTrường hợp giao dịch chưa có kết quả hoặc đang chờ xử lý, MoMo sẽ thực hiện đối soát và trả kết quả trong vòng 2 ngày làm việc (không tính ngày thứ 7, chủ nhật, ngày lễ) theo quy định chung của Liên minh Napas.",
+    "transferFee": "Miễn phí 30 giao dịch đầu tiên của tháng (Tổng số tiền giao dịch nhỏ hơn hoặc bằng 5.000.000đ)\nSố tiền chênh lệch so với 5 triệu được tính theo công thức: 0.65% x Số tiền chênh lệch + 3.300đ\n\nTừ các giao dịch tiếp theo, mức phí: 0.65% x Số tiền chuyển + 3.300đ"
+  }
+}
