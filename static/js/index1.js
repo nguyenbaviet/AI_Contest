@@ -242,11 +242,11 @@ stopButton.addEventListener('click', async () => {
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
             console.log("token: ", token_id);
-            console.log("voice: ", voice_id);
+            console.log("voice: ", voice_id.substring(1, voice_id.length - 1));
             var raw = JSON.stringify({
               "base_64_voice": base64AudioMessage,
               "token": token_id,
-              "voice_id": voice_id
+              "voice_id": voice_id.substring(1, voice_id.length - 1)
             });
 
             var requestOptions = {
@@ -259,7 +259,14 @@ stopButton.addEventListener('click', async () => {
               .then(response => response.text())
               .then(result => {
                 waitingS2T.style.display="None";
-                s2tResult.innerHTML = JSON.parse(JSON.parse(result).result).detail;
+                console.log(result);
+                var status = JSON.parse(JSON.parse(result).result).status;
+                if (status == 2) {
+                  s2tResult.innerHTML = 'Short speech'
+                }
+                else if (status == 3 || status == 4) {
+                  s2tResult.innerHTML = JSON.parse(JSON.parse(result).result).payload.score;
+                }
                 btnVoice.removeAttribute("disabled");
               })
               .catch(error => console.log('error', error));
