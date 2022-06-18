@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>BestMonster</title>
+{% endblock %}
+
+{% block content %}
+<!--Modal  voice payment-->
+<div class="modal fade" id="voicePayment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">MoMo Voice Payment</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <button id="record">Record</button>
+          <button id="pause" disabled>Pause</button>
+          <button id="stop" disabled>Stop</button>
+          <button id="play" disabled>Play</button>
+        </div>
+        <div id="s2tResult"></div>
+        <div class="wrapper" id="waitingS2T" style="display: None">
+          <div class="typing-demo">
+            Working in progress...
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button id="btnEnroll" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target='#enrollOutput' disabled>Enroll</button>
+        <button id="btnVoice" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#voicePaymentDetail" disabled>Transfer Money</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="voicePaymentDetail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">MoMo Voice Payment</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="transferMoneyForm">
+          Successfully!
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#voicePayment" style="background: blue">Back</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="enrollOutput" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Enroll Voice Result</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="s2tResultEnroll"></div>
+        <div class="wrapper" id="waitingS2TEnroll" style="display: block">
+          <div class="typing-demo">
+            Working in progress...
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Modal voice payment-->
+{% endblock %}
+
+{% block js %}
+<script src="static/js/index1.js"></script>
+{% endblock %}
