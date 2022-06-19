@@ -243,10 +243,17 @@ class BankExtractor:
                                                                             self.phone_references,
                                                                             self.name_references)
 
+    bank_info.bank_name = bank_name
+    bank_info.bank_id = bank_id
+    bank_info.account = name
+    bank_info.phone_number = phone_number
+
+    return bank_info
+
 
 
 if __name__ == "__main__":
   ner_model_path = '/home/thiendo/Desktop/AI_Contest/information_extraction/ner/ner_20220516.pth'
   bank_extractor = BankExtractor(ner_checkpoint=ner_model_path)
   info = ['Chuyển tiền cho Nguyễn Văn A ngan hang Techcombank không chín bốn năm không hai hai bảy một hai']
-  bank_extractor(info)
+  print(bank_extractor(info))
