@@ -14,16 +14,38 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+<!--        button-->
         <div>
           <button id="record">Record</button>
           <button id="pause" disabled>Pause</button>
           <button id="stop" disabled>Stop</button>
           <button id="play" disabled>Play</button>
         </div>
+<!--        warning text-->
         <div id="s2tResult"></div>
+<!--        waiting progress-->
         <div class="wrapper" id="waitingS2T" style="display: None">
           <div class="typing-demo">
             Working in progress...
+          </div>
+        </div>
+<!--        info form-->
+        <div id="infoForm" style="display: none">
+          <div class="mb-3 mt-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
+          </div>
+          <div class="mb-3 mt-3">
+            <label for="bankName" class="form-label">Bank Name</label>
+            <input type="text" class="form-control" id="bankName" placeholder="Enter bank name" name="bankName">
+          </div>
+          <div class="mb-3">
+            <label for="bankAccount" class="form-label">Account</label>
+            <input type="text" class="form-control" id="bankAccount" placeholder="Enter account" name="bankAccount">
+          </div>
+          <div class="mb-3">
+            <label for="amount" class="form-label">Amount</label>
+            <input type="number" class="form-control" id="amount" placeholder="Enter account" name="amount">
           </div>
         </div>
       </div>

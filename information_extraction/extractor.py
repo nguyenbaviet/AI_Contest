@@ -6,12 +6,10 @@ import json
 import string
 import re
 import os
-import matplotlib.pyplot as plt
 from dataclasses import dataclass
-import time
 
-from ner.model import TextClassifyModel
-from utils import extract_info
+from .ner.model import TextClassifyModel
+from .utils import extract_info
 
 
 def remove_special_tokens(text):
@@ -242,18 +240,11 @@ class BankExtractor:
                                                                             self.bank_references,
                                                                             self.phone_references,
                                                                             self.name_references)
-
-    bank_info.bank_name = bank_name
-    bank_info.bank_id = bank_id
-    bank_info.account = name
-    bank_info.phone_number = phone_number
-
-    return bank_info
-
+    return {"bank_name": bank_name, "bank_id": bank_id, "phone": phone_number, "name": name, "score": confidence_score}
 
 
 if __name__ == "__main__":
   ner_model_path = '/home/thiendo/Desktop/AI_Contest/information_extraction/ner/ner_20220516.pth'
   bank_extractor = BankExtractor(ner_checkpoint=ner_model_path)
   info = ['Chuyển tiền cho Nguyễn Văn A ngan hang Techcombank không chín bốn năm không hai hai bảy một hai']
-  print(bank_extractor(info))
+  bank_extractor(info)
