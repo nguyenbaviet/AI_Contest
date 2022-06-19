@@ -1,9 +1,21 @@
+.bg-dark {
+    background-color:#9f0a59 !important;
+}
+
+.text-primary {
+    color: #9f0a59 !important;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    color: #9f0a59 !important;
+}
+
 /********** Template CSS **********/
 :root {
     --primary: #F3BD00;
     --secondary: #757575;
     --light: #F3F6F8;
-    --dark: #0C2B4B;
+    --dark: #9f0a59;
 }
 
 .py-6 {

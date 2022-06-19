@@ -68,6 +68,7 @@ const bankName = document.querySelector("#bankName");
 const bankAccount = document.querySelector("#bankAccount");
 const username = document.querySelector("#username");
 const amount = document.querySelector("#amount");
+const s2tRes = document.querySelector('#s2tRes');
 
 
 let recorder;
@@ -97,6 +98,7 @@ for (var i = 0; i < btnVoicePayment.length; i++){
     btnVoice.setAttribute('disabled', true);
     s2tResult.innerHTML = "";
     s2tResultEnroll.innerHTML = "";
+    s2tResEnroll.innerHTML = "";
     infoForm.style.display = 'none';
     bankName.value = '';
     bankAccount.value = '';
@@ -116,6 +118,7 @@ for (var i = 0; i < btnEnrollVoice.length; i++){
     btnVoice.setAttribute('disabled', true);
     s2tResultEnroll.innerHTML = "";
     s2tResult.innerHTML = "";
+    s2tRes.innerHTML = "";
     infoForm.style.display = 'none';
     bankName.value = '';
     bankAccount.value = '';
@@ -208,6 +211,7 @@ recordButton.addEventListener('click', async () => {
     recorder = await recordAudio();
   }
   s2tResult.innerHTML = "";
+  s2tRes.innerHTML = "";
   recorder.start();
 });
 
@@ -294,10 +298,10 @@ stopButton.addEventListener('click', async () => {
                 waitingS2T.style.display="None";
               }
               if (status == 2) {
-                s2tResult.innerHTML = '<div style="color: red">Cannot verify. Please speak more longer!</div>';
+                s2tResult.innerHTML = '<div style="color: red">Please speak longer!</div>';
               }
               else if (status == 4){
-                s2tResult.innerHTML = '<div style="color:red"> Your voice do not match!!! </div>';
+                s2tResult.innerHTML = '<div style="color:red">Your voice does not match!!!</div>';
               }
               else if (status == 3) {
                 const myHeaders = new Headers();
@@ -332,6 +336,7 @@ stopButton.addEventListener('click', async () => {
                       username.value = result.name;
                       amount.value = 1000000;
                       btnVoice.removeAttribute("disabled");
+                      s2tRes.innerHTML = "<p>Command: " + transcript + "</p>";
                     })
                     .catch(error => console.log(error));
                  })
