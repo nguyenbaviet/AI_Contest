@@ -9,6 +9,8 @@
   "bảy": "7",
   "tám": "8",
   "chín": "9",
+  "trăm": "*100+",
+  "triệu": "*1000+",
   "việt com băng": "vietcombank",
   "việt com banh": "vietcombank",
   "việt combank": "vietcombank",

@@ -91,6 +91,30 @@ def get_best_match(x, y):
   return difflib.get_close_matches(query, ngrams_text, n=1, cutoff=0)
 
 
+def get_amount_by_regex(texts: dict):
+  for idx, item in texts.items():
+    text = item['org_text']
+    print(text)
+    digits = ''
+    for c in text:
+      if c.isdigit() or c == "+"  or c == '*':
+        digits += c
+
+      else:
+        digits += ' '
+
+    amount = None
+    digit_elems = digits.split()
+    for elem in digit_elems:
+      if "*" in elem or "+" in elem:
+        amount = elem
+
+    amount = re.sub('[(+*)]$', '', amount)
+    amount = eval(amount)
+    
+    return amount * 1000
+
+
 def get_bank_name_entities_by_regex(item_index, item, bank_name_references):
   """
 
@@ -618,8 +642,14 @@ def extract_info(texts: dict, bank_references, phone_references, name_references
     org_name = texts[name_idx]['org_text']
   print('Detected name is ', org_name, name)
 
+  amount = get_amount_by_regex(texts)
+  if amount is not None:
+    amount = str(amount)
+  else:
+    amount = ''
+
   total_score = bank_name_score * bank_acc_score
   print('Confidence score is ', total_score)
 
   return org_bank_name, org_bank_acc, org_phone_number, org_name, \
-         bank_name, bank_acc, phone_number, name, total_score
+         bank_name, bank_acc, phone_number, name, amount, total_score

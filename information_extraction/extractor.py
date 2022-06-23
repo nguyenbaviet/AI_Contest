@@ -236,11 +236,12 @@ class BankExtractor:
 
     # post process to get bank item
     org_bank_name, org_bank_id, org_phone_number, org_name, \
-    bank_name, bank_id, phone_number, name, confidence_score = extract_info(predictions,
+    bank_name, bank_id, phone_number, name, amount, confidence_score = extract_info(predictions,
                                                                             self.bank_references,
                                                                             self.phone_references,
                                                                             self.name_references)
-    return {"bank_name": bank_name, "bank_id": bank_id, "phone": phone_number, "name": name, "score": confidence_score}
+    print(amount)
+    return {"bank_name": bank_name, "bank_id": bank_id, "phone": phone_number, "name": name, "amount": amount, "score": confidence_score}
 
 
 if __name__ == "__main__":
