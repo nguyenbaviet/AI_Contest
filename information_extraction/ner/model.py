@@ -350,7 +350,11 @@ def normalize_text(text, norm_dict):
           while re.search(p, text):
             text = re.sub(p, ' ' + value + ' ', text)
 
-    # text = re.sub(r'(\d)\s', r'\1', text)
+    # merge number
+    p = r'(\d)\s(\d)'
+    while re.search(p, text):
+      text = re.sub(p, r'\1\2', text)
+
     text = re.sub(r'chuyển tiền', '', text)
 
     return text
