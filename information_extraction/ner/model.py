@@ -344,9 +344,13 @@ def process_tag(tag_seq: list, known_tag_seq: list):
 def normalize_text(text, norm_dict):
     for key in list(norm_dict.keys()):
         value = norm_dict[key]
-        text = text.replace(' ' + key, value)
+        # text = text.replace(' ' + key, value)
+        patterns = ['^' + key + '\s', '\s' + key + '\s', '\s' + key + '$']
+        for p in patterns:
+          while re.search(p, text):
+            text = re.sub(p, ' ' + value + ' ', text)
 
-    text = re.sub(r'(\d)\s', r'\1', text)
+    # text = re.sub(r'(\d)\s', r'\1', text)
     text = re.sub(r'chuyển tiền', '', text)
 
     return text

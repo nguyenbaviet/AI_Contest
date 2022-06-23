@@ -21,7 +21,6 @@ templates = Jinja2Templates(directory="templates")
 async def get_hello(request: Request):
   return templates.TemplateResponse("main.html", {"request": request})
 
-
 @app.post("/save/{item}")
 async def save_json(item: str):
   with open('database/db.json') as f:
@@ -56,3 +55,10 @@ async def get_voice_id():
 async def info_extraction(text: str):
   info = information_extractor([text])
   return info
+
+
+if __name__ == "__main__":
+  ner_model_path = '/home/thiendo/Desktop/AI_Contest/information_extraction/ner/ner_20220516.pth'
+  bank_extractor = BankExtractor(ner_checkpoint=ner_model_path)
+  info = ['Chuyển tiền cho Nguyễn Văn A ngan hang việt căm banh không chín bốn năm không hai hai bảy một hai']
+  bank_extractor(info)
