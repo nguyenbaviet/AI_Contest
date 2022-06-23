@@ -60,5 +60,5 @@ async def info_extraction(text: str):
 if __name__ == "__main__":
   ner_model_path = '/home/thiendo/Desktop/AI_Contest/information_extraction/ner/ner_20220516.pth'
   bank_extractor = BankExtractor(ner_checkpoint=ner_model_path)
-  info = ['Chuyển tiền cho Nguyễn Văn A ngan hang việt căm banh không chín bốn năm không hai hai bảy một hai']
+  info = ['ngân hàng ngoại thương việt nam một chín không một chín không ba tám sáu']
   bank_extractor(info)

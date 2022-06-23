@@ -343,9 +343,18 @@ def process_tag(tag_seq: list, known_tag_seq: list):
 
 def normalize_text(text, norm_dict):
     for key in list(norm_dict.keys()):
+      for i in range(2):
+        if i == 0:
+          map_key = key
+        else:
+          if not norm_dict[key].isnumeric():
+            map_key = unidecode(key)
+          else:
+            continue
+
         value = norm_dict[key]
         # text = text.replace(' ' + key, value)
-        patterns = ['^' + key + '\s', '\s' + key + '\s', '\s' + key + '$']
+        patterns = ['^' + map_key + '\s', '\s' + map_key + '\s', '\s' + map_key + '$']
         for p in patterns:
           while re.search(p, text):
             text = re.sub(p, ' ' + value + ' ', text)
