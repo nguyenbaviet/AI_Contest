@@ -49,6 +49,50 @@ function convertVoiceToB64(){
   }, 5000)
 }
 
+function speech2text(){
+  const myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  const raw = JSON.stringify({
+    "base_64_voice": base64AudioMessage
+  });
+
+  const requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+  };
+ fetch("https://tbot1.anhph.com/s2t", requestOptions)
+  .then(response => response.text())
+  .then(result => {
+    console.log("transcript: ", JSON.parse(JSON.parse(result).result).transcript);
+    // TODO: apply information extraction here
+    var transcript = JSON.parse(JSON.parse(result).result).transcript;
+    if (transcript == ''){
+      transcript = 'none';
+    };
+
+    fetch("/extraction/" + transcript)
+      .then(result => result.text())
+      .then(result => {
+        console.log(result);
+        result = JSON.parse(result);
+        waitingS2T.style.display="None";
+        infoForm.style.display = 'block';
+        // set attribute for element
+        bankName.value = result.bank_name;
+        bankAccount.value = result.bank_id;
+        username.value = result.name;
+        amount.value = 1000000;
+        btnVoice.removeAttribute("disabled");
+        s2tRes.innerHTML = "<p>Command: " + transcript + "</p>";
+      })
+      .catch(error => console.log(error));
+   })
+  .catch(error => console.log('error', error));
+   }
+
 const sleep = time => new Promise(resolve => setTimeout(resolve, time));
 
 const recordButton = document.querySelector('#record');
@@ -69,6 +113,8 @@ const bankAccount = document.querySelector("#bankAccount");
 const username = document.querySelector("#username");
 const amount = document.querySelector("#amount");
 const s2tRes = document.querySelector('#s2tRes');
+const checkBoxBlock = document.querySelector('#checkBoxBlock');
+const checkBoxVal = document.querySelector('#checkBoxVoice');
 
 
 let recorder;
@@ -90,6 +136,7 @@ fetch("/get_voice_id")
 // switch to payment modal
 for (var i = 0; i < btnVoicePayment.length; i++){
   btnVoicePayment[i].addEventListener('click', async () => {
+    checkBoxBlock.style.display = 'block';
     purposeText = 'voice'
     btnVoice.style.display = 'block';
     btnEnroll.style.display = 'none';
@@ -98,7 +145,6 @@ for (var i = 0; i < btnVoicePayment.length; i++){
     btnVoice.setAttribute('disabled', true);
     s2tResult.innerHTML = "";
     s2tResultEnroll.innerHTML = "";
-    s2tResEnroll.innerHTML = "";
     infoForm.style.display = 'none';
     bankName.value = '';
     bankAccount.value = '';
@@ -110,6 +156,7 @@ for (var i = 0; i < btnVoicePayment.length; i++){
 // switch to enroll modal
 for (var i = 0; i < btnEnrollVoice.length; i++){
   btnEnrollVoice[i].addEventListener('click', async () => {
+    checkBoxBlock.style.display = 'none';
     purposeText = 'enroll'
     btnEnroll.style.display = 'block';
     btnVoice.style.display = 'none';
@@ -235,6 +282,7 @@ stopButton.addEventListener('click', async () => {
   playButton.removeAttribute('disabled');
   pauseButton.textContent = "Pause";
   audio = await recorder.stop();
+  console.log("check box: ", checkBoxVal.checked);
 
   waitingS2T.style.display='block';
 
@@ -267,85 +315,64 @@ stopButton.addEventListener('click', async () => {
 
   // Speech to text
   if (purposeText == 'voice'){
+      if (checkBoxVal.checked){
+        // verify voice
+              // get voice id
+              fetch("/get_voice_id")
+              .then(response => response.text())
+              .then(result => {
+                  var voice_id = JSON.parse(result).voice_id;
+                  var myHeaders = new Headers();
+                  myHeaders.append("Content-Type", "application/json");
+                  console.log("voice id: ", voice_id);
+                  var raw = JSON.stringify({
+                    "base_64_voice": base64AudioMessage,
+                    "token": token_id,
+                    "voice_id": voice_id
+                  });
 
-      // verify voice
-      // get voice id
-      fetch("/get_voice_id")
-      .then(response => response.text())
-      .then(result => {
-          var voice_id = JSON.parse(result).voice_id;
-          var myHeaders = new Headers();
-          myHeaders.append("Content-Type", "application/json");
-          console.log("voice id: ", voice_id);
-          var raw = JSON.stringify({
-            "base_64_voice": base64AudioMessage,
-            "token": token_id,
-            "voice_id": voice_id
-          });
-
-          var requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: raw,
-            redirect: 'follow'
-          };
-          fetch("https://tbot1.anhph.com/verify", requestOptions)
-            .then(response => response.text())
-            .then(result => {
-              console.log(JSON.parse(result).result);
-              var status = JSON.parse(JSON.parse(result).result).status;
-              if (status == 2 || status == 4){
-                waitingS2T.style.display="None";
-              }
-              if (status == 2) {
-                s2tResult.innerHTML = '<div style="color: red">Please speak longer!</div>';
-              }
-              else if (status == 4){
-                s2tResult.innerHTML = '<div style="color:red">Your voice does not match!!!</div>';
-              }
-              else if (status == 3) {
-                const myHeaders = new Headers();
-                myHeaders.append("Content-Type", "application/json");
-
-                const raw = JSON.stringify({
-                  "base_64_voice": base64AudioMessage
-                });
-
-                const requestOptions = {
-                  method: 'POST',
-                  headers: myHeaders,
-                  body: raw,
-                  redirect: 'follow'
-                };
-               fetch("https://tbot1.anhph.com/s2t", requestOptions)
-                .then(response => response.text())
-                .then(result => {
-                  console.log("transcript: ", JSON.parse(JSON.parse(result).result).transcript);
-                  // TODO: apply information extraction here
-//                  s2tResult.innerHTML = JSON.parse(JSON.parse(result).result).transcript;
-                  var transcript = JSON.parse(JSON.parse(result).result).transcript;
-                  fetch("/extraction/" + transcript)
-                    .then(result => result.text())
+                  var requestOptions = {
+                    method: 'POST',
+                    headers: myHeaders,
+                    body: raw,
+                    redirect: 'follow'
+                  };
+                  fetch("https://tbot1.anhph.com/verify", requestOptions)
+                    .then(response => response.text())
                     .then(result => {
-                      result = JSON.parse(result);
+                      console.log(JSON.parse(result).result);
                       waitingS2T.style.display="None";
-                      infoForm.style.display = 'block';
-                      // set attribute for element
-                      bankName.value = result.bank_name;
-                      bankAccount.value = result.bank_id;
-                      username.value = result.name;
-                      amount.value = 1000000;
-                      btnVoice.removeAttribute("disabled");
-                      s2tRes.innerHTML = "<p>Command: " + transcript + "</p>";
+                      var status = JSON.parse(JSON.parse(result).result).status;
+                      if (status == 2){
+                        s2tResult.innerHTML = '<div style="color: red">Please speak longer!</div>';
+                      }
+                      else if (status == 3 || status == 4){
+                        var score = JSON.parse(JSON.parse(result).result).payload.score;
+                        console.log("score: ", score);
+                        if (score < 0.4){
+                          s2tResult.innerHTML = '<div style="color:red">Your voice does not match!!!</div>';
+                        } else {
+                          speech2text()
+                        }
+                      }
+//                      if (status == 2) {
+//                        s2tResult.innerHTML = '<div style="color: red">Please speak longer!</div>';
+//                      }
+//                      else if (status == 4){
+//                        s2tResult.innerHTML = '<div style="color:red">Your voice does not match!!!</div>';
+//                      }
+//                      else if (status == 3) {
+//                        speech2text()
+//                      }
                     })
-                    .catch(error => console.log(error));
-                 })
-                .catch(error => console.log('error', error));
-              }
-            })
-            .catch(error => console.log('error', error));
-      })
-      .catch(error => console.log('error', error));
+                    .catch(error => console.log('error', error));
+              })
+              .catch(error => console.log('error', error));
+      }
+      else {
+        console.log("s2t only");
+        speech2text();
+      }
   }else{
     waitingS2T.style.display="None";
     s2tResult.innerHTML = '<div style="color: blue"> Ready to enroll your voice. Please click <i>Enroll</i> button to finish.</div>';

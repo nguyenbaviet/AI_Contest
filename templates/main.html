@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-<title>BestMonster</title>
+<title>Voice Payment</title>
 {% endblock %}
 
 {% block content %}
@@ -20,6 +20,11 @@
           <button id="pause" disabled>Pause</button>
           <button id="stop" disabled>Stop</button>
           <button id="play" disabled>Play</button>
+<!--          checkbox-->
+          <div class="form-check form-switch" id="checkBoxBlock" style="display: none">
+            <input class="form-check-input" type="checkbox" id="checkBoxVoice">
+            <label class="form-check-label" for="checkBoxVoice">Voice Verification</label>
+          </div>
         </div>
 <!--        warning text-->
         <div id="s2tResult"></div>
@@ -31,7 +36,7 @@
         </div>
 <!--        info form-->
         <div id="infoForm" style="display: none">
-          <div id="s2tRes"></div>
+          <div id="s2tRes" style="display: none"></div>
           <div class="mb-3 mt-3">
             <label for="username" class="form-label">Username</label>
             <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
