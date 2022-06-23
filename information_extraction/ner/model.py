@@ -366,6 +366,7 @@ def normalize_text(text, norm_dict):
 
     text = text.replace(' *', '*')
     text = text.replace('+ ', '+')
+    text = text.replace('+*', '*')
     text = re.sub(r'chuyển tiền', '', text)
 
     return text
