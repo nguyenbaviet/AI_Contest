@@ -341,19 +341,29 @@ stopButton.addEventListener('click', async () => {
                     .then(response => response.text())
                     .then(result => {
                       console.log(JSON.parse(result).result);
+                      waitingS2T.style.display="None";
                       var status = JSON.parse(JSON.parse(result).result).status;
-                      if (status == 2 || status == 4){
-                        waitingS2T.style.display="None";
-                      }
-                      if (status == 2) {
+                      if (status == 2){
                         s2tResult.innerHTML = '<div style="color: red">Please speak longer!</div>';
                       }
-                      else if (status == 4){
-                        s2tResult.innerHTML = '<div style="color:red">Your voice does not match!!!</div>';
+                      else if (status == 3 || status == 4){
+                        var score = JSON.parse(JSON.parse(result).result).payload.score;
+                        console.log("score: ", score);
+                        if (score < 0.4){
+                          s2tResult.innerHTML = '<div style="color:red">Your voice does not match!!!</div>';
+                        } else {
+                          speech2text()
+                        }
                       }
-                      else if (status == 3) {
-                        speech2text()
-                      }
+//                      if (status == 2) {
+//                        s2tResult.innerHTML = '<div style="color: red">Please speak longer!</div>';
+//                      }
+//                      else if (status == 4){
+//                        s2tResult.innerHTML = '<div style="color:red">Your voice does not match!!!</div>';
+//                      }
+//                      else if (status == 3) {
+//                        speech2text()
+//                      }
                     })
                     .catch(error => console.log('error', error));
               })
