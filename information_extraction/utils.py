@@ -109,13 +109,14 @@ def get_amount_by_regex(texts: dict):
       if "*" in elem or "+" in elem:
         amount = elem
 
-    if '*1000' in amount:
-      elems = amount.split('*1000')
-      if len(elems) == 2:
-        amount = '(' + elems[0] + ')' + '*1000' + elems[1]
+    if amount is not None:
+      if '*1000' in amount:
+        elems = amount.split('*1000')
+        if len(elems) == 2:
+          amount = '(' + elems[0] + ')' + '*1000' + elems[1]
 
-    amount = re.sub('[(+*)]$', '', amount)
-    amount = eval(amount)
+      amount = re.sub('[(+*)]$', '', amount)
+      amount = eval(amount)
     
     return amount * 1000
 
