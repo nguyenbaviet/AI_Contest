@@ -88,9 +88,17 @@ function speech2text(){
         btnVoice.removeAttribute("disabled");
         s2tRes.innerHTML = "<p>Command: " + transcript + "</p>";
       })
-      .catch(error => console.log(error));
+      .catch(error => {
+        console.log(error);
+        waitingS2T.style.display="None";
+        s2tResultEnroll.innerHTML = '<div style="color: red"> Opp!!! Something went wrong. Please try again!</div>';
+      });
    })
-  .catch(error => console.log('error', error));
+  .catch(error => {
+    console.log(error);
+    waitingS2T.style.display="None";
+    s2tResultEnroll.innerHTML = '<div style="color: red"> Opp!!! Something went wrong. Please try again!</div>';
+  });
    }
 
 const sleep = time => new Promise(resolve => setTimeout(resolve, time));
@@ -365,9 +373,17 @@ stopButton.addEventListener('click', async () => {
 //                        speech2text()
 //                      }
                     })
-                    .catch(error => console.log('error', error));
+                    .catch(error => {
+                      console.log(error);
+                      waitingS2T.style.display="None";
+                      s2tResultEnroll.innerHTML = '<div style="color: red"> Opp!!! Something went wrong. Please try again!</div>';
+                    });
               })
-              .catch(error => console.log('error', error));
+              .catch(error => {
+              console.log(error);
+              waitingS2T.style.display="None";
+              s2tResultEnroll.innerHTML = '<div style="color: red"> Opp!!! Something went wrong. Please try again!</div>';
+              });
       }
       else {
         console.log("s2t only");
