@@ -118,7 +118,9 @@ def get_amount_by_regex(texts: dict):
       amount = re.sub('[(+*)]$', '', amount)
       amount = eval(amount)
     
-    return amount * 1000
+      return amount * 1000
+    else:
+      return amount
 
 
 def get_bank_name_entities_by_regex(item_index, item, bank_name_references):
