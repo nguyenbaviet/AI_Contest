@@ -84,7 +84,7 @@ function speech2text(){
         bankName.value = result.bank_name;
         bankAccount.value = result.bank_id;
         username.value = result.name;
-        amount.value = 1000000;
+        amount.value = result.amount;
         btnVoice.removeAttribute("disabled");
         s2tRes.innerHTML = "<p>Command: " + transcript + "</p>";
       })
